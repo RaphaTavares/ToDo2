@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
-using static TasksAPI.Data.TaskContext;
+using static TarefasApi.Data.TarefaContext;
 
-namespace TasksAPI.Extensions
+namespace TarefasApi.Extensions
 {
     public static class ServiceCollectionsExtensions
     {
@@ -10,7 +10,7 @@ namespace TasksAPI.Extensions
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
             builder.Services.AddScoped<GetConnection>(sp =>
-            async() =>
+            async () =>
             {
                 var connection = new SqlConnection(connectionString);
                 await connection.OpenAsync();

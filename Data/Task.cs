@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TasksAPI.Data
-{
-    [Table("Task")]
-    public record Task(int Id, string Name, string Status);
-}
+namespace TarefasApi.Data;
+
+[Table("Tarefas")]
+public record Tarefa(int Id, string Atividade, string Status);

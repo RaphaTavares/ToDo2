@@ -1,7 +1,9 @@
-﻿namespace TasksAPI.Data
+﻿using System.Data;
+
+namespace TarefasApi.Data
 {
-    public class TaskContext
+    public class TarefaContext
     {
-        public delegate Task<IdbConnection> GetConnection();
+        public delegate Task<IDbConnection> GetConnection();
     }
 }
